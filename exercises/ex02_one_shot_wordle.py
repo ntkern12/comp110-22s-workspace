@@ -19,20 +19,31 @@ index = 0
 
 results = ""
 
-letter_at_dif_i = False
-
-secret_index = 0
-
 while (len(your_word) < num_letters or len(your_word) > num_letters) and count < 5:
     your_word = input(f"That was not {num_letters} letters! Try again: ")
     count = count + 1
+
+if count == 5:
+    print("Not quite. Play again soon!")
+    exit()
 
 while index < num_letters:
     if your_word[index] == secret_word[index]:
         results = results + GREEN_BOX
     else:
-        results = results + WHITE_BOX
+        letter_at_dif_i = False
+        secret_index = 0
+        while not letter_at_dif_i and secret_index < num_letters:
+            if secret_word[secret_index] == your_word[index]:
+                letter_at_dif_i = True
+            else:
+                secret_index = secret_index + 1
+        if letter_at_dif_i:
+            results = results + YELLOW_BOX
+        else:
+            results = results + WHITE_BOX
     index = index + 1
+
 
 print(results)
 
