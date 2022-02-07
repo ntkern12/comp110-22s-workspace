@@ -3,7 +3,7 @@
 __author__ = "730382185"
 
 
-def contains_char(x_word, x_letter):
+def contains_char(x_word: str, x_letter: str) -> bool:
     """Test for letters in words."""
     assert len(x_letter) == 1
     word_index = 0
@@ -16,7 +16,7 @@ def contains_char(x_word, x_letter):
     return False
 
 
-def emojified(guess_word, secret_word):
+def emojified(guess_word: str, secret_word: str) -> str:
     """Return results as emojis."""
     assert len(guess_word) == len(secret_word)
     WHITE_BOX: str = "\U00002B1C"
@@ -37,11 +37,11 @@ def emojified(guess_word, secret_word):
     return results
 
 
-def input_guess(length_word):
+def input_guess(length_word: int) -> str:
     """Check word length."""
-    your_word = input(f"What is your {length_word}-letter guess? ")
+    your_word = input(f"Enter a {length_word} character word? ")
     while (len(your_word) < length_word or len(your_word) > length_word):
-        your_word = input(f"That was not {length_word} letters! Try again: ")
+        your_word = input(f"That wasn't {length_word} chars! Try again: ")
     return your_word
 
 
