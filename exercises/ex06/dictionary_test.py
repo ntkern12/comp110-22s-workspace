@@ -36,8 +36,18 @@ def test_favorite_color_2():
 
 
 def test_favorite_color_3():
+    """Test with even numbers of colors."""
+    assert favorite_color({'Al': 'green', 'Charlie': 'yellow'}) == 'green'
+
+
+def test_favorite_color_4():
     """Test with empty dictionary."""
     assert favorite_color({}) == ""
+
+
+def test_favorite_color_5():
+    """Test with 2 colors."""
+    assert favorite_color({"Marc": "green", "Mark": "green", "Marcy": "yellow", "Ezri": "green", "Kris": "green"}) == 'green'
 
 
 def test_count_1():
