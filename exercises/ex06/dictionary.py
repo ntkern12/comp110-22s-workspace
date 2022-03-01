@@ -88,6 +88,3 @@ def count(a_list: list[str]) -> dict[str, int]:
             new_dict[a_list[i]] = 1
         i = i + 1
     return(new_dict)
-
-
-print(type(favorite_color({"Marc": "green", "Mark": "green", "Marcy": "yellow", "Ezri": "green", "Kris": "green"})))
