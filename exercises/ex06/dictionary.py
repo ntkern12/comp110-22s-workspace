@@ -51,7 +51,7 @@ def favorite_color(b_dict: dict[str, str]) -> str:
     i = 0
     j = 0
     if len(fav_color_keys_list) == 0:
-        fav_color = ""
+        fav_color = ''
     else:
         while i < len(fav_color_values_list):
             if i == j:
@@ -70,7 +70,7 @@ def favorite_color(b_dict: dict[str, str]) -> str:
                     j = j + 1
             i = i + 1
         max_color_value = max(fav_color_values_list)
-        fav_color = ""
+        fav_color = ''
         for key in new_dict:
             if new_dict[key] == max_color_value:
                 fav_color = key
@@ -88,3 +88,6 @@ def count(a_list: list[str]) -> dict[str, int]:
             new_dict[a_list[i]] = 1
         i = i + 1
     return(new_dict)
+
+
+print(type(favorite_color({"Marc": "green", "Mark": "green", "Marcy": "yellow", "Ezri": "green", "Kris": "green"})))

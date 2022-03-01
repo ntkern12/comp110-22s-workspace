@@ -42,7 +42,7 @@ def test_favorite_color_3():
 
 def test_favorite_color_4():
     """Test with empty dictionary."""
-    assert favorite_color({}) == ""
+    assert favorite_color({}) == ''
 
 
 def test_favorite_color_5():
