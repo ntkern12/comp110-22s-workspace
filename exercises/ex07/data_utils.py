@@ -47,7 +47,7 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
-    """Return values from first N rows of a table"""
+    """Return values from first N rows of a table."""
     result: dict[str, list[str]] = {}
     for column in table:
         n_row: list[str] = []
@@ -89,6 +89,7 @@ def concat(table1: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[s
 
 
 def count(values: list[str]) -> dict[str, int]:
+    """Return count of values."""
     result: dict[str, int] = {}
     for item in values:
         if item in result:
