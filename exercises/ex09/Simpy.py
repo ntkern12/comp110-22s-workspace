@@ -8,6 +8,7 @@ __author__ = "YOUR PID HERE"
 
 
 class Simpy:
+    """Class Simpy."""
     values: list[float]
 
     def __init__(self, values: list[float]):
@@ -19,6 +20,7 @@ class Simpy:
         return f"Simpy({self.values})"
 
     def fill(self, value: float, num_values: int) -> None:
+        """Fill Method."""
         vals = []
         i = 0
         while i < num_values:
@@ -27,6 +29,7 @@ class Simpy:
         self.values = vals
         
     def arange(self, start: float, stop: float, step: float = 1.0):
+        """Arange Method."""
         assert step != 0.0
         i = 0
         rang_vals = []
@@ -43,6 +46,7 @@ class Simpy:
         self.values = rang_vals
 
     def sum(self) -> float:
+        """Sum Method."""
         return sum(self.values)
 
     def __add__(self, rhs: Union[float, Simpy]) -> Simpy:
